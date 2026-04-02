@@ -8,4 +8,4 @@
 
 Выполненные автотесты: 
 
-![Тесты]()
+![Тесты]( https://github.com/nkchrnnk/ChernenkayaV.V._3ISIP_523_TK/blob/main/Снимок%20экрана%202026-04-02%20в%2015.17.49.png)
