@@ -1,9 +1,43 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="tk.MainWindow"
-        Title="tk">
-    Welcome to Avalonia!
+        Width="420" Height="260"
+        Title="Калькулятор">
+
+    <Grid Margin="20">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Операнд:"/>
+        <TextBox Name="txtA" Grid.Row="1"/>
+        
+        <TextBlock Text="Операнд:" Grid.Row="2"/>
+        <TextBox Name="txtB" Grid.Row="2" Margin="0,20,0,0"/>
+        
+        <StackPanel Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Center" Spacing="10">
+            <TextBlock Text="Операция"/>
+            <RadioButton Name="rbPlus" Content="+" IsChecked="True"/>
+            <RadioButton Name="rbMinus" Content="-"/>
+            <RadioButton Name="rbMultiply" Content="*"/>
+            <RadioButton Name="rbDivide" Content="/"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Spacing="10">
+            <Button Content="Вычислить" Click="Calculate_Click"/>
+            <TextBlock Text="Результат"/>
+            <TextBox Name="txtResult" IsReadOnly="True"/>
+        </StackPanel>
+
+    </Grid>
+
 </Window>
